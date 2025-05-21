@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="nameError" style="color: red; display: none;"></span>
+        </div>
+        <div>
+            <label for="email">Email address:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError" style="color: red; display: none;"></span>
+        </div>
+        <div>
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <span class="error-message" id="genderError" style="color: red; display: block; margin-top: 5px;"></span>
+        </div>
+        <div>
+            <label for="inquiry">Inquiry content:</label>
+            <textarea id="inquiry" name="inquiry" rows="5" required></textarea>
+            <span class="error-message" id="inquiryError" style="color: red; display: none;"></span>
+        </div>
+        <div>
+            <button type="submit">Send Inquiry</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

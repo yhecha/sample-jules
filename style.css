@@ -1,0 +1,128 @@
+/* Basic Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Form Container Styling */
+#contactForm {
+    background: #fff;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.error-message {
+    color: red;
+    display: none; /* Initially hidden */
+    font-size: 0.9em;
+    margin-top: 3px; /* Add a little space above the error message */
+}
+
+/* Specific styling for gender error to ensure it's noticeable */
+#genderError {
+    display: none; /* Initially hidden, will be set to block by JS if error */
+    margin-top: 5px; /* Space from radio buttons */
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Input Field and Textarea Styling */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 22px); /* Adjust width to account for padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width calculation */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Radio Button Alignment and Styling */
+div > label:first-of-type { /* Target general labels */
+    margin-bottom: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+input[type="radio"] + label { /* Labels next to radio buttons */
+    font-weight: normal;
+    display: inline-block; /* Keep label on the same line */
+    margin-right: 15px;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contactForm {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    /* Stack radio buttons for very small screens */
+    input[type="radio"] + label {
+        display: block;
+        margin-bottom: 8px;
+    }
+}
